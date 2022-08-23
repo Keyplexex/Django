@@ -1,7 +1,14 @@
     {% extends 'blog/base_blog.html' %}
 
-    {% for name in names %}
-        <p>
-            {{ name }}
-        </p>
-    {% endfor %}
+    {% block title %}
+        Posts list
+    {% endblock %}
+
+    {% block content %}
+        <h3 class="mb-5"> Posts: </h3>
+        {% for name in names %}
+            <p>
+                {{ name }}
+            </p>
+        {% endfor %}
+    {% endblock %}
